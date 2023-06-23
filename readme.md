@@ -1,0 +1,2 @@
+# jsx-classname-shorthand
+

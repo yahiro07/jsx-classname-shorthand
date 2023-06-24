@@ -1,8 +1,8 @@
 # jsx-classname-shorthand
 
-Make jsx accepts q props as a shorthand alias for className.
+Make jsx accepts `q` props as a shorthand alias for `className`.
 
-I usually give class names to elements for styling, but since the prop className is a long word for how often it is used. I therefore created a wrapper for the jsx runtime that allows className to be written in short props called "q".
+I usually give class names to elements for styling, but since the prop `className` is a long word for how often it is used. I therefore created a wrapper for the jsx runtime that allows `className` to be written in short props called `q`.
 
 ## install
 
@@ -27,7 +27,7 @@ Specify `jsx-classname-shorthand` for `jsxImportSource`.
 ## code example
 
 Say there is a jsx code with `className` as follows
-```html
+```tsx
   <div className="article-card">
     <div className="header-row">
       <div className="icon">{article.authorIconText}</div>
@@ -38,7 +38,7 @@ Say there is a jsx code with `className` as follows
 ```
 
 Now it can be written this way using `q` props
-```html
+```tsx
   <div q="article-card">
     <div q="header-row">
       <div q="icon">{article.authorIconText}</div>
@@ -62,10 +62,10 @@ Props `q` accepts an array of classname values
 
 ## if props
 There is `if` props added for conditional rendering. It is similar to `ngIf` in angular or `v-if` in vue.
-```html
+```tsx
   <div if={someCondition}>hello</div>
 ```
-it is equivalent to
+it results equivalent to
 ```tsx
   {someCondition && <div>hello</div> }
 ```

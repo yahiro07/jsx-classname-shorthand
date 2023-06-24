@@ -28,8 +28,8 @@ export const App: FC = () => {
         </div>
         <div q="main-area">
           <div q="article-list">
-            {articles.map((article) => (
-              <div q="article-card">
+            {articles.map((article, idx) => (
+              <div q="article-card" key={idx}>
                 <div q="header-row">
                   <div q="icon">{article.authorIconText}</div>
                   <div q="name">{article.authorName}</div>

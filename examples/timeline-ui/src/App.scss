@@ -1,0 +1,93 @@
+$cl_white: #fff;
+$cl_main_text: #333;
+$cl_title_bar_fill: #4c4;
+$cl_site_background: #ccc;
+$cl_page_background: #f0f0f0;
+$cl_card_background: #fff;
+
+@mixin flexVertical($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap * 1px;
+}
+
+@mixin flexHorizontalAligned($gap: 0) {
+  display: flex;
+  align-items: center;
+  gap: $gap * 1px;
+}
+
+@mixin flexCentered($gap: 0) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap * 1px;
+}
+
+.app {
+  height: 100vh;
+  background: $cl_site_background;
+  color: $cl_main_text;
+  display: flex;
+  justify-content: center;
+
+  > .narrower {
+    width: 100%;
+    max-width: 640px;
+    border: solid 3px $cl_title_bar_fill;
+    background: $cl_page_background;
+
+    @include flexVertical();
+
+    > .top-bar {
+      flex-shrink: 0;
+      background: $cl_title_bar_fill;
+      color: $cl_white;
+      @include flexHorizontalAligned(3);
+      padding: 2px 5px;
+      > .icon {
+        font-size: 30px;
+        padding-bottom: 2px;
+      }
+      > h1 {
+        font-size: 30px;
+      }
+    }
+
+    > .main-area {
+      flex-grow: 1;
+      overflow-y: scroll;
+
+      > .article-list {
+        padding: 20px;
+        @include flexVertical(15);
+
+        > .article-card {
+          background: $cl_card_background;
+          box-shadow: 0 0 3px #0008;
+          padding: 20px;
+          @include flexVertical(5);
+
+          > .header-row {
+            @include flexHorizontalAligned(6);
+
+            > .icon {
+              flex-shrink: 0;
+              @include flexCentered();
+              font-size: 22px;
+              border-radius: 50%;
+              box-shadow: 0 0 2px #0008;
+              width: 40px;
+              height: 40px;
+              padding-bottom: 3px;
+            }
+
+            > .name {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

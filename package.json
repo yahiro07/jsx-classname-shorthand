@@ -18,7 +18,11 @@
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "jsx",
+    "classname"
+  ],
   "dependencies": {
     "react": "^18.2.0"
   },

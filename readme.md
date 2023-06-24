@@ -51,6 +51,15 @@ Now it can be written this way using `q` props
 There is a working code at
 [examples/timeline-ui](https://github.com/yahiro07/jsx-classname-shorthand/blob/main/examples/timeline-ui/src/App.tsx)
 
+
+## multiple classnames
+
+```tsx
+  <div q={["foo", "bar", "buzz"]} />
+```
+Props `q` accepts an array of classname values
+
+
 ## if props
 There is `if` props added for conditional rendering. It is similar to `ngIf` in angular or `v-if` in vue.
 ```html

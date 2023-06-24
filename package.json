@@ -1,19 +1,17 @@
 {
   "name": "jsx-classname-shorthand",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "jsx runtime wrapper utilizes a shorthand alias for className props.",
   "repository": "https://github.com/yahiro07/jsx-classname-shorthand.git",
   "author": "yahiro",
   "license": "MIT",
   "type": "module",
-  "types": "./types/jsx.d.ts",
+  "types": "./jsx-runtime.d.ts",
   "main": "./dist/jsx-runtime.js",
   "module": "./dist/jsx-runtime.mjs",
   "exports": {
-    ".": {
-      "types": "./types/jsx.d.ts"
-    },
     "./jsx-runtime": {
+      "types": "./jsx-runtime.d.ts",
       "import": "./dist/jsx-runtime.mjs",
       "require": "./dist/jsx-runtime.js"
     },
@@ -24,7 +22,8 @@
   },
   "files": [
     "types",
-    "dist"
+    "dist",
+    "jsx-runtime.d.ts"
   ],
   "scripts": {
     "build": "rollup -c",

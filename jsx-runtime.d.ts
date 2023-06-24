@@ -1,1 +1,1 @@
-export * from "./types/index.js";
+export { JsxExtendedReactJSX as JSX } from "./jsx-namespace";

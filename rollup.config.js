@@ -1,12 +1,18 @@
 import esbuild from "rollup-plugin-esbuild";
 
-function bundle(namePart) {
+function bundle(namePart, format) {
+  const ext = format === "es" ? ".mjs" : ".js";
   return {
     input: `src/${namePart}.ts`,
     external: (id) => !/^[./]/.test(id),
     plugins: [esbuild()],
-    output: [{ file: `${namePart}.mjs`, format: "es" }],
+    output: [{ file: `dist/${namePart}${ext}`, format }],
   };
 }
 
-export default [bundle("jsx-dev-runtime"), bundle("jsx-runtime")];
+export default [
+  bundle("jsx-runtime", "es"),
+  bundle("jsx-dev-runtime", "es"),
+  bundle("jsx-runtime", "cjs"),
+  bundle("jsx-dev-runtime", "cjs"),
+];

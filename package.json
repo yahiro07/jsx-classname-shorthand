@@ -6,13 +6,25 @@
   "author": "yahiro",
   "license": "MIT",
   "type": "module",
-  "types": "./jsx-runtime.d.ts",
-  "module": "./jsx-runtime.mjs",
+  "types": "./types/jsx.d.ts",
+  "main": "./dist/jsx-runtime.js",
+  "module": "./dist/jsx-runtime.mjs",
+  "exports": {
+    ".": {
+      "types": "./types/jsx.d.ts"
+    },
+    "./jsx-runtime": {
+      "import": "./dist/jsx-runtime.mjs",
+      "require": "./dist/jsx-runtime.js"
+    },
+    "./jsx-dev-runtime": {
+      "import": "./dist/jsx-dev-runtime.mjs",
+      "require": "./dist/jsx-dev-runtime.js"
+    }
+  },
   "files": [
-    "jsx-namespace.d.ts",
-    "jsx-runtime.d.ts",
-    "jsx-runtime.mjs",
-    "jsx-dev-runtime.mjs"
+    "types",
+    "dist"
   ],
   "scripts": {
     "build": "rollup -c",
@@ -31,6 +43,6 @@
     "@types/react": "^18.2.14"
   },
   "peerDependencies": {
-    "react": "> 17.0.0"
+    "react": ">= 17.0.0"
   }
 }

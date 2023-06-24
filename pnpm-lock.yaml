@@ -2,7 +2,7 @@ lockfileVersion: '6.0'
 
 dependencies:
   react:
-    specifier: ^18.2.0
+    specifier: '> 17.0.0'
     version: 18.2.0
 
 devDependencies:

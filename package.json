@@ -1,6 +1,6 @@
 {
   "name": "jsx-classname-shorthand",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "jsx runtime wrapper utilizes a shorthand alias for className props.",
   "repository": "https://github.com/yahiro07/jsx-classname-shorthand.git",
   "author": "yahiro",

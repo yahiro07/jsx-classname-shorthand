@@ -16,16 +16,17 @@ tsconfig.json
 ```json
 {
   "compilerOptions": {
-    ...other configs,
+    ...,
     "jsx": "react-jsx",
     "jsxImportSource": "jsx-classname-shorthand",
   }
 }
 ```
+Specify `jsx-classname-shorthand` for `jsxImportSource`.
 
 ## code example
 
-Say there is a jsx code with className as follows
+Say there is a jsx code with `className` as follows
 ```html
   <div className="article-card">
     <div className="header-row">
@@ -36,7 +37,7 @@ Say there is a jsx code with className as follows
   </div>
 ```
 
-Now it can be written this way using q props
+Now it can be written this way using `q` props
 ```html
   <div q="article-card">
     <div q="header-row">
@@ -51,7 +52,7 @@ There is a working code at
 [examples/timeline-ui](https://github.com/yahiro07/jsx-classname-shorthand/blob/main/examples/timeline-ui/src/App.tsx)
 
 ## if props
-There is the if props added for conditional rendering. It is similar to ngIf in angular or v-if in vue.
+There is `if` props added for conditional rendering. It is similar to `ngIf` in angular or `v-if` in vue.
 ```html
   <div if={someCondition}>hello</div>
 ```

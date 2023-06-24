@@ -4,6 +4,8 @@ Make jsx accepts `q` props as a shorthand alias for `className`.
 
 I usually give class names to elements for styling, but since the prop `className` is a long word for how often it is used. I therefore created a wrapper for the jsx runtime that allows `className` to be written in short props called `q`.
 
+This library is assumed to be used in conjunction with React.
+
 ## install
 
 ```

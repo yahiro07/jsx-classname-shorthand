@@ -8,6 +8,8 @@ export namespace JsxExtendedReactJSX {
 
   export type ElementChildrenAttribute = JSX.ElementChildrenAttribute;
 
+  export type ElementType = JSX.ElementType;
+
   export type IntrinsicAttributes = JSX.IntrinsicAttributes & {
     if?: IPropsIfValue;
     q?: IPropsQValue;
